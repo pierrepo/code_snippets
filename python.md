@@ -9,6 +9,12 @@
     >>> sys.getsizeof(v)
     24
 
+## Server web minimaliste
+
+    python -m SimpleHTTPServer 8080
+
+Ouvre un serveur web sur le port 8080. Accessible depuis un navigateur internet à l'adresse http://localhost:8080/ ou http://0.0.0.0:8080/ 
+
 ## Exemples avec le microframework web Bottle
 
 https://gist.github.com/Arthraim/994641
