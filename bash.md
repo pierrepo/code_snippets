@@ -1,6 +1,6 @@
 ## Entête de scripts
 
-Permet de rendre plus strict un script bash
+Pour rendre un script bash moins tolérant aux erreurs et aux déclarations implicites de variables.
 
     #!/bin/bash
     set -euo pipefail
