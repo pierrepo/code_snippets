@@ -12,6 +12,8 @@
     >>> print "a= %8i b= %8.2f c= %8s" %(a, b, c)
     a=       12 b=     3.46 c=    hello
 
+La méthode `print( "xxx {y}".format() )` est la méthode d'affichage compatible Python 2.7 et Python 3.x.
+
     >>> print("a= {0} b= {1} c={2}").format(a, b, c)
     a= 12 b= 3.4567 c=hello
     >>> print("a= {0:8d} b= {1:8.2f} c={2:8s}").format(a, b, c)
