@@ -12,16 +12,24 @@
     >>> print "a= %8i b= %8.2f c= %8s" %(a, b, c)
     a=       12 b=     3.46 c=    hello
 
-La méthode `print( "xxx {y}".format() )` est la méthode d'affichage compatible Python 2.7 et Python 3.x.
+La méthode `print("xxx {y}".format())` est la méthode d'affichage compatible Python 2.7 et Python 3.x.
 
     >>> print("a= {0} b= {1} c={2}").format(a, b, c)
     a= 12 b= 3.4567 c=hello
+    >>> print("a= {2} b= {0} c={1}").format(a, b, c)
+    a= hello b= 12 c=3.4567
+    >>> print("a= {} b= {} c={}").format(a, b, c)
+    a= 12 b= 3.4567 c=hello
+    
     >>> print("a= {0:8d} b= {1:8.2f} c={2:8s}").format(a, b, c)
     a=       12 b=     3.46 c=hello  
     >>> print("a= {0:<8d} b= {1:<8.2f} c={2:<8s}").format(a, b, c)
     a= 12       b= 3.46     c=hello  
     >>> print("a= {0:0>8d} b= {1:0>8.2f} c={2:0>8s}").format(a, b, c)
     a= 00000012 b= 00003.46 c=000hello
+    >>> print("a= {0:*^8d} b= {1:*^8.2f} c={2:*^8s}").format(a, b, c)
+    a= ***12*** b= **3.46** c=*hello**
+
     >>> print("a= {val_a} b= {val_b} c={val_c}").format(val_a=a, val_c=c, val_b=b)
     a= 12 b= 3.4567 c=hello
 
@@ -32,7 +40,16 @@ La méthode `print( "xxx {y}".format() )` est la méthode d'affichage compatible
     >>> print(test(val_c = c, val_a = a, val_b = b))
     a= 12 b= 3.4567 c=hello
 
-    
+    >>> my_list = [12, 3.4567, 'hello']
+    >>> print("a= {0} b= {1} c={2}".format(*my_list))
+    a= 12 b= 3.4567 c=hello
+    >>> print("a= {} b= {} c={}".format(*my_list))
+    a= 12 b= 3.4567 c=hello
+
+    >>> my_dic = {'a_value': 12, 'b_value': 3.4567, 'c_value': 'hello'}
+    >>> print("a= {a_value} b= {b_value} c={c_value}".format(**my_dic))
+    a= 12 b= 3.4567 c=hello
+
 
 ## Taille d'un objet en Python
     
