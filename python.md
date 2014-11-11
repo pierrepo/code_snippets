@@ -50,6 +50,10 @@ La méthode `print("xxx {y}".format())` est la méthode d'affichage compatible P
     >>> print("a= {a_value} b= {b_value} c={c_value}".format(**my_dic))
     a= 12 b= 3.4567 c=hello
 
+    >>> print("Les {} sont obtenues avec {{}}".format("accolades"))
+    Les accolades sont obtenues avec {}
+
+
 
 ## Taille d'un objet en Python
     
