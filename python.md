@@ -125,5 +125,59 @@ https://gist.github.com/Arthraim/994641
         # do something here
 
 
+## commande dans subprocess avec un timeout
 
+Pour éviter que les commandes lancées avec subprocess ne s'arrêtent pas.
 
+http://stackoverflow.com/questions/1191374/subprocess-with-timeout
+
+Code multiplateforme compatible Python 2.x et 3.x
+
+    import subprocess, threading
+
+    class Command(object):
+    def __init__(self, cmd):
+        self.cmd = cmd
+        self.process = None
+
+    def run(self, timeout):
+        def target():
+            print 'Thread started'
+            self.process = subprocess.Popen(self.cmd, shell=True)
+            self.process.communicate()
+            print 'Thread finished'
+
+        thread = threading.Thread(target=target)
+        thread.start()
+
+        thread.join(timeout)
+        if thread.is_alive():
+            print 'Terminating process'
+            self.process.terminate()
+            thread.join()
+        print self.process.returncode
+
+    command = Command("echo 'Process started'; sleep 2; echo 'Process finished'")
+    command.run(timeout=3)
+    command.run(timeout=1)
+
+Sortie :
+
+    Thread started
+    Process started
+    Process finished
+    Thread finished
+    0
+    Thread started
+    Process started
+    Terminating process
+    Thread finished
+    -15
+
+Autre méthode, mais à partir de Python 3.3 ou avec le module subprocess32 pour Python 2.x :
+
+    from subprocess import STDOUT, check_output as qx
+
+    output = qx(cmd, stderr=STDOUT, timeout=seconds)
+
+ 
