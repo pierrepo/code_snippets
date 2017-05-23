@@ -1,4 +1,4 @@
-## Print
+# Formatage de chaînes de caractères
 
     >>> a = 12
     >>> b = 3.4567
@@ -53,10 +53,11 @@ La méthode `print("xxx {y}".format())` est la méthode d'affichage compatible P
     >>> print("Les {} sont obtenues avec {{}}".format("accolades"))
     Les accolades sont obtenues avec {}
 
+Le site <https://pyformat.info/> fait une comparaison entre l'opérateur `%` et la méthode `.format()`
 
 
-## Taille d'un objet en Python
-    
+# Taille d'un objet en Python
+
     >>> t = "test"
     >>> v = 123
     >>> import sys
@@ -66,31 +67,38 @@ La méthode `print("xxx {y}".format())` est la méthode d'affichage compatible P
     >>> sys.getsizeof(v)
     24
 
-## Server web minimaliste
+Attention, cette méthode ne fonctionne a priori pas avec des conteneurs (liste, tuple, dictionnaire).
+
+
+# Server web minimaliste
+
+Avec Python 2.7 :
 
     python -m SimpleHTTPServer 8080
 
-Ouvre un serveur web sur le port 8080. Accessible depuis un navigateur internet à l'adresse http://localhost:8080/ ou http://0.0.0.0:8080/ 
+Avec Python 3.x :
 
-## Exemples avec le microframework web Bottle
+    python -m http.server 8080
 
-https://gist.github.com/Arthraim/994641
+Ces commandes ouvrent un serveur web sur le port 8080. Accessible depuis un navigateur internet à l'adresse <http://localhost:8080/> ou <http://0.0.0.0:8080/>. 
+
+
+# Exemples plus élaborés avec le microframework web Bottle
+
+Pour Python 2.7 : <https://gist.github.com/Arthraim/994641>
+
 
 ## Modèle de script
 
     #! /usr/bin/env python
-    # -*- coding: utf-8 -*-
+    # coding: utf-8
     
     """Short description of program
 
     More description.
     """
     
-    #==============================================================================
-    # Info
-    #==============================================================================
-
-    __author__ = "Toto, titi"
+     __author__ = "Toto, titi"
     __copyright__ = "Copyright 2014, Toto & Titi"
     __credits__ = ["Tutu"]
     __license__ = "GPL"
@@ -98,34 +106,37 @@ https://gist.github.com/Arthraim/994641
     __maintainer__ = "toto"
     __email__ = "toto@bob.com"
     
-    #==============================================================================
-    # Modules
-    #==============================================================================
-    ## Standard modules
+    # import modules from standard library
 
-
-    ## Third party modules
-
-   
-    #==============================================================================
-    # Functions
-    #==============================================================================
+    # import mpdules from third parties
 
     def my_function():
-        """
-        Do this and that
-        """
-        # do something
+    """
+    First description line
+
+    Mode detailed description.
+
+    Parameters
+    ----------
+    param1 : int
+        The first parameter.
+    param2 : str
+        The second parameter.
+
+    Returns
+    -------
+    bool
+        True if successful, False otherwise.
+
+    """
         
 
-    #==============================================================================
-    # Main
-    #==============================================================================
+    # start of main program
     if __name__ == "__main__":
         # do something here
 
 
-## commande dans subprocess avec un timeout
+# Commande dans subprocess avec un timeout
 
 Pour éviter que les commandes lancées avec subprocess ne s'arrêtent pas.
 
