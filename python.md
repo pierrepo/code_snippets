@@ -70,6 +70,7 @@ Le site <https://pyformat.info/> fait une comparaison entre l'opérateur `%` et 
 Attention, cette méthode ne fonctionne a priori pas avec des conteneurs (liste, tuple, dictionnaire).
 
 
+
 # Server web minimaliste
 
 Avec Python 2.7 :
