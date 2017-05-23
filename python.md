@@ -82,13 +82,10 @@ Avec Python 3.x :
 
 Ces commandes ouvrent un serveur web sur le port 8080. Accessible depuis un navigateur internet à l'adresse <http://localhost:8080/> ou <http://0.0.0.0:8080/>. 
 
-
-# Exemples plus élaborés avec le microframework web Bottle
-
-Pour Python 2.7 : <https://gist.github.com/Arthraim/994641>
+Exemples plus élaborés avec le microframework web Bottle, pour Python 2.7 : <https://gist.github.com/Arthraim/994641>
 
 
-## Modèle de script
+# Modèle de script
 
     #! /usr/bin/env python
     # coding: utf-8
@@ -111,24 +108,25 @@ Pour Python 2.7 : <https://gist.github.com/Arthraim/994641>
     # import mpdules from third parties
 
     def my_function():
-    """
-    First description line
+        """
+        First description line
 
-    Mode detailed description.
+        Mode detailed description.
 
-    Parameters
-    ----------
-    param1 : int
-        The first parameter.
-    param2 : str
-        The second parameter.
+        Parameters
+        ----------
+        param1 : int
+            The first parameter.
+        param2 : str
+            The second parameter.
 
-    Returns
-    -------
-    bool
-        True if successful, False otherwise.
+        Returns
+        -------
+        bool
+            True if successful, False otherwise.
 
-    """
+        """
+        # function core
         
 
     # start of main program
