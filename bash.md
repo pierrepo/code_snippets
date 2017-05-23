@@ -1,4 +1,4 @@
-## Entête de scripts
+# Entête de script
 
 Pour rendre un script bash moins tolérant aux erreurs et aux déclarations implicites de variables.
 
@@ -6,13 +6,13 @@ Pour rendre un script bash moins tolérant aux erreurs et aux déclarations impl
     set -euo pipefail
     IFS=$'\n\t' 
 
-* `-e` stoppe le script à la première erreur rencontrée
-* `-u` stoppe le script lorsqu'une variable non définie est appelée
-* `-o pipefail` stoppe le script lorsqu'il y une erreur dans un pipe
+* `-e` arrête le script à la première erreur rencontrée
+* `-u` arrête le script lorsqu'une variable non définie est appelée
+* `-o pipefail` arrête le script lorsqu'il y une erreur dans un pipe
 * `IFS=$'\n\t'` définie le séparateur de mot avec la tabulation ou le retour à la ligne (mais pas l'espace)
 
-Source : 
+Source : <http://redsymbol.net/articles/unofficial-bash-strict-mode/>. 
 
-* http://redsymbol.net/articles/unofficial-bash-strict-mode/
+Voir également l'article <http://jvns.ca/blog/2017/03/26/bash-quirks/> pour de bonnes pratiques Bash.
 
 
