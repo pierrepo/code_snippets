@@ -14,23 +14,23 @@
 
 La méthode `print("xxx {y}".format())` est la méthode d'affichage compatible Python 2.7 et Python 3.x.
 
-    >>> print("a= {0} b= {1} c={2}").format(a, b, c)
+    >>> print("a= {0} b= {1} c={2}".format(a, b, c))
     a= 12 b= 3.4567 c=hello
-    >>> print("a= {2} b= {0} c={1}").format(a, b, c)
+    >>> print("a= {2} b= {0} c={1}".format(a, b, c))
     a= hello b= 12 c=3.4567
-    >>> print("a= {} b= {} c={}").format(a, b, c)
+    >>> print("a= {} b= {} c={}".format(a, b, c))
     a= 12 b= 3.4567 c=hello
     
-    >>> print("a= {0:8d} b= {1:8.2f} c={2:8s}").format(a, b, c)
+    >>> print("a= {0:8d} b= {1:8.2f} c={2:8s}".format(a, b, c))
     a=       12 b=     3.46 c=hello  
-    >>> print("a= {0:<8d} b= {1:<8.2f} c={2:<8s}").format(a, b, c)
+    >>> print("a= {0:<8d} b= {1:<8.2f} c={2:<8s}".format(a, b, c))
     a= 12       b= 3.46     c=hello  
-    >>> print("a= {0:0>8d} b= {1:0>8.2f} c={2:0>8s}").format(a, b, c)
+    >>> print("a= {0:0>8d} b= {1:0>8.2f} c={2:0>8s}".format(a, b, c))
     a= 00000012 b= 00003.46 c=000hello
-    >>> print("a= {0:*^8d} b= {1:*^8.2f} c={2:*^8s}").format(a, b, c)
+    >>> print("a= {0:*^8d} b= {1:*^8.2f} c={2:*^8s}".format(a, b, c))
     a= ***12*** b= **3.46** c=*hello**
 
-    >>> print("a= {val_a} b= {val_b} c={val_c}").format(val_a=a, val_c=c, val_b=b)
+    >>> print("a= {val_a} b= {val_b} c={val_c}".format(val_a=a, val_c=c, val_b=b))
     a= 12 b= 3.4567 c=hello
 
     >>> test = "a= {0} b= {1} c={2}".format
@@ -70,7 +70,7 @@ Le site <https://pyformat.info/> fait une comparaison entre l'opérateur `%` et 
 Attention, cette méthode ne fonctionne a priori pas avec des conteneurs (liste, tuple, dictionnaire).
 
 
-# Server web minimaliste
+# Serveur web minimaliste
 
 Avec Python 2.7 :
 
@@ -87,15 +87,14 @@ Exemples plus élaborés avec le microframework web Bottle, pour Python 2.7 : <h
 
 # Modèle de script
 
-    #! /usr/bin/env python
-    # coding: utf-8
+    #! /usr/bin/env python3
     
     """Short description of program
 
-    More description.
+    More description here.
     """
     
-     __author__ = "Toto, titi"
+    __author__ = "Toto, titi"
     __copyright__ = "Copyright 2014, Toto & Titi"
     __credits__ = ["Tutu"]
     __license__ = "GPL"
@@ -105,7 +104,7 @@ Exemples plus élaborés avec le microframework web Bottle, pour Python 2.7 : <h
     
     # import modules from standard library
 
-    # import mpdules from third parties
+    # import modules from third parties
 
     def my_function():
         """
